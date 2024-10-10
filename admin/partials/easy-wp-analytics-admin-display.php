@@ -8,8 +8,8 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/admin/partials
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/admin/partials
  */
 ?>
 

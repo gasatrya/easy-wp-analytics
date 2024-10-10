@@ -6,8 +6,8 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/admin
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/admin
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/admin
  * @author     Ga Satrya <ga@wpanalytics.pro>
  */
-class Easy_Wp_Analytics_Admin {
+class Easy_WP_Analytics_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -64,10 +64,10 @@ class Easy_Wp_Analytics_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Easy_Wp_Analytics_Loader as all of the hooks are defined
+		 * defined in Easy_WP_Analytics_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Easy_Wp_Analytics_Loader will then create the relationship
+		 * The Easy_WP_Analytics_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -86,10 +86,10 @@ class Easy_Wp_Analytics_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Easy_Wp_Analytics_Loader as all of the hooks are defined
+		 * defined in Easy_WP_Analytics_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Easy_Wp_Analytics_Loader will then create the relationship
+		 * The Easy_WP_Analytics_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

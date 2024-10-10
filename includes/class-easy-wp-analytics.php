@@ -9,8 +9,8 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  * @author     Ga Satrya <ga@wpanalytics.pro>
  */
-class Easy_Wp_Analytics {
+class Easy_WP_Analytics {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Easy_Wp_Analytics {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Easy_Wp_Analytics_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Easy_WP_Analytics_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -85,10 +85,10 @@ class Easy_Wp_Analytics {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Easy_Wp_Analytics_Loader. Orchestrates the hooks of the plugin.
-	 * - Easy_Wp_Analytics_i18n. Defines internationalization functionality.
-	 * - Easy_Wp_Analytics_Admin. Defines all hooks for the admin area.
-	 * - Easy_Wp_Analytics_Public. Defines all hooks for the public side of the site.
+	 * - Easy_WP_Analytics_Loader. Orchestrates the hooks of the plugin.
+	 * - Easy_WP_Analytics_I18n. Defines internationalization functionality.
+	 * - Easy_WP_Analytics_Admin. Defines all hooks for the admin area.
+	 * - Easy_WP_Analytics_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -121,13 +121,13 @@ class Easy_Wp_Analytics {
 		 */
 		require_once plugin_dir_path( __DIR__ ) . 'public/class-easy-wp-analytics-public.php';
 
-		$this->loader = new Easy_Wp_Analytics_Loader();
+		$this->loader = new Easy_WP_Analytics_Loader();
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Easy_Wp_Analytics_i18n class in order to set the domain and to register the hook
+	 * Uses the Easy_WP_Analytics_I18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -135,7 +135,7 @@ class Easy_Wp_Analytics {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Easy_Wp_Analytics_i18n();
+		$plugin_i18n = new Easy_WP_Analytics_I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
@@ -149,7 +149,7 @@ class Easy_Wp_Analytics {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Easy_Wp_Analytics_Admin( $this->get_easy_wp_analytics(), $this->get_version() );
+		$plugin_admin = new Easy_WP_Analytics_Admin( $this->get_easy_wp_analytics(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -164,7 +164,7 @@ class Easy_Wp_Analytics {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Easy_Wp_Analytics_Public( $this->get_easy_wp_analytics(), $this->get_version() );
+		$plugin_public = new Easy_WP_Analytics_Public( $this->get_easy_wp_analytics(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -194,7 +194,7 @@ class Easy_Wp_Analytics {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Easy_Wp_Analytics_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Easy_WP_Analytics_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

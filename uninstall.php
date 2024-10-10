@@ -22,7 +22,7 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
+ * @package    Easy_WP_Analytics
  */
 
 // If uninstall not called from WordPress, then exit.

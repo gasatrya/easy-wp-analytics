@@ -9,8 +9,8 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  * @author     Ga Satrya <ga@wpanalytics.pro>
  */
-class Easy_Wp_Analytics_i18n {
+class Easy_WP_Analytics_I18n {
 
 
 	/**
@@ -39,9 +39,5 @@ class Easy_Wp_Analytics_i18n {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
-
 }

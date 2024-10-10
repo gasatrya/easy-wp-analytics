@@ -9,7 +9,7 @@
  *
  * @link              https://wpanalytics.pro/
  * @since             1.0.0
- * @package           Easy_Wp_Analytics
+ * @package           Easy_WP_Analytics
  *
  * @wordpress-plugin
  * Plugin Name:       Easy WP Analytics
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EASY_WP_ANALYTICS_VERSION', '1.0.0' );
+const EASY_WP_ANALYTICS_VERSION = '1.0.0';
 
 /**
  * The code that runs during plugin activation.
@@ -42,7 +42,7 @@ define( 'EASY_WP_ANALYTICS_VERSION', '1.0.0' );
  */
 function activate_easy_wp_analytics() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics-activator.php';
-	Easy_Wp_Analytics_Activator::activate();
+	Easy_WP_Analytics_Activator::activate();
 }
 
 /**
@@ -51,7 +51,7 @@ function activate_easy_wp_analytics() {
  */
 function deactivate_easy_wp_analytics() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics-deactivator.php';
-	Easy_Wp_Analytics_Deactivator::deactivate();
+	Easy_WP_Analytics_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_easy_wp_analytics' );
@@ -73,7 +73,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics.php';
  * @since    1.0.0
  */
 function run_easy_wp_analytics() {
-	$plugin = new Easy_Wp_Analytics();
+	$plugin = new Easy_WP_Analytics();
 	$plugin->run();
 }
 run_easy_wp_analytics();

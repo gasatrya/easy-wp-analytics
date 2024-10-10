@@ -6,8 +6,8 @@
  * @link       https://wpanalytics.pro/
  * @since      1.0.0
  *
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Easy_Wp_Analytics
- * @subpackage Easy_Wp_Analytics/includes
+ * @package    Easy_WP_Analytics
+ * @subpackage Easy_WP_Analytics/includes
  * @author     Ga Satrya <ga@wpanalytics.pro>
  */
-class Easy_Wp_Analytics_Deactivator {
+class Easy_WP_Analytics_Deactivator {
 
 	/**
 	 * Short Description. (use period)
@@ -30,7 +30,5 @@ class Easy_Wp_Analytics_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
 	}
-
 }

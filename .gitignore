@@ -1,0 +1,25 @@
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.sql
+*.tar
+*.gz
+*.zip
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Composer files
+/vendor/
+
+# Node modules
+/node_modules/

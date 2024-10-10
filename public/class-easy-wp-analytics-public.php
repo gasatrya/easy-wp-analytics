@@ -27,9 +27,9 @@ class Easy_Wp_Analytics_Public {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $easyWpAnalytics    The ID of this plugin.
+	 * @var      string    $easy_wp_analytics    The ID of this plugin.
 	 */
-	private $easyWpAnalytics;
+	private $easy_wp_analytics;
 
 	/**
 	 * The version of this plugin.
@@ -44,14 +44,13 @@ class Easy_Wp_Analytics_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $easyWpAnalytics       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
+	 * @param      string $easy_wp_analytics       The name of the plugin.
+	 * @param      string $version    The version of this plugin.
 	 */
-	public function __construct( $easyWpAnalytics, $version ) {
+	public function __construct( $easy_wp_analytics, $version ) {
 
-		$this->easyWpAnalytics = $easyWpAnalytics;
-		$this->version = $version;
-
+		$this->easy_wp_analytics = $easy_wp_analytics;
+		$this->version           = $version;
 	}
 
 	/**
@@ -73,8 +72,7 @@ class Easy_Wp_Analytics_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->easyWpAnalytics, plugin_dir_url( __FILE__ ) . 'css/easy-wp-analytics-public.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style( $this->easy_wp_analytics, plugin_dir_url( __FILE__ ) . 'css/easy-wp-analytics-public.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -96,8 +94,6 @@ class Easy_Wp_Analytics_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->easyWpAnalytics, plugin_dir_url( __FILE__ ) . 'js/easy-wp-analytics-public.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script( $this->easy_wp_analytics, plugin_dir_url( __FILE__ ) . 'js/easy-wp-analytics-public.js', array( 'jquery' ), $this->version, false );
 	}
-
 }

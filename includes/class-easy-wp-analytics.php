@@ -44,9 +44,9 @@ class Easy_Wp_Analytics {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $easyWpAnalytics    The string used to uniquely identify this plugin.
+	 * @var      string    $easy_wp_analytics    The string used to uniquely identify this plugin.
 	 */
-	protected $easyWpAnalytics;
+	protected $easy_wp_analytics;
 
 	/**
 	 * The current version of the plugin.
@@ -72,13 +72,12 @@ class Easy_Wp_Analytics {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->easyWpAnalytics = 'easy-wp-analytics';
+		$this->easy_wp_analytics = 'easy-wp-analytics';
 
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
 	}
 
 	/**
@@ -103,27 +102,26 @@ class Easy_Wp_Analytics {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-easy-wp-analytics-loader.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-easy-wp-analytics-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-easy-wp-analytics-i18n.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-easy-wp-analytics-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-easy-wp-analytics-admin.php';
+		require_once plugin_dir_path( __DIR__ ) . 'admin/class-easy-wp-analytics-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-easy-wp-analytics-public.php';
+		require_once plugin_dir_path( __DIR__ ) . 'public/class-easy-wp-analytics-public.php';
 
 		$this->loader = new Easy_Wp_Analytics_Loader();
-
 	}
 
 	/**
@@ -140,7 +138,6 @@ class Easy_Wp_Analytics {
 		$plugin_i18n = new Easy_Wp_Analytics_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -152,11 +149,10 @@ class Easy_Wp_Analytics {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Easy_Wp_Analytics_Admin( $this->get_easyWpAnalytics(), $this->get_version() );
+		$plugin_admin = new Easy_Wp_Analytics_Admin( $this->get_easy_wp_analytics(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
 	}
 
 	/**
@@ -168,11 +164,10 @@ class Easy_Wp_Analytics {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Easy_Wp_Analytics_Public( $this->get_easyWpAnalytics(), $this->get_version() );
+		$plugin_public = new Easy_Wp_Analytics_Public( $this->get_easy_wp_analytics(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
 	}
 
 	/**
@@ -191,8 +186,8 @@ class Easy_Wp_Analytics {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_easyWpAnalytics() {
-		return $this->easyWpAnalytics;
+	public function get_easy_wp_analytics() {
+		return $this->easy_wp_analytics;
 	}
 
 	/**
@@ -214,5 +209,4 @@ class Easy_Wp_Analytics {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

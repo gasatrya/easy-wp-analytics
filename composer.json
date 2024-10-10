@@ -1,0 +1,24 @@
+{
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "archive": {
+    "exclude": [
+      ".gitignore",
+      "README.md",
+      "composer.json",
+      "composer.lock",
+      "LICENSE",
+      "vendor/",
+      ".vscode/"
+    ]
+  },
+  "scripts": {
+    "zip": "composer archive --format=zip --file easy-wp-analytics"
+  }
+}

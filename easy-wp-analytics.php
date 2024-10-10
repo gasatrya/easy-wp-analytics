@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -41,7 +40,7 @@ define( 'EASY_WP_ANALYTICS_VERSION', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-easy-wp-analytics-activator.php
  */
-function activate_easyWpAnalytics() {
+function activate_easy_wp_analytics() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics-activator.php';
 	Easy_Wp_Analytics_Activator::activate();
 }
@@ -50,13 +49,13 @@ function activate_easyWpAnalytics() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-easy-wp-analytics-deactivator.php
  */
-function deactivate_easyWpAnalytics() {
+function deactivate_easy_wp_analytics() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics-deactivator.php';
 	Easy_Wp_Analytics_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_easyWpAnalytics' );
-register_deactivation_hook( __FILE__, 'deactivate_easyWpAnalytics' );
+register_activation_hook( __FILE__, 'activate_easy_wp_analytics' );
+register_deactivation_hook( __FILE__, 'deactivate_easy_wp_analytics' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -73,10 +72,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-easy-wp-analytics.php';
  *
  * @since    1.0.0
  */
-function run_easyWpAnalytics() {
-
+function run_easy_wp_analytics() {
 	$plugin = new Easy_Wp_Analytics();
 	$plugin->run();
-
 }
-run_easyWpAnalytics();
+run_easy_wp_analytics();
